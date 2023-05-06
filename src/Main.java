@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -12,10 +14,13 @@ public class Main {
         // 6.daca exista litera inlocuim steluta de la pozitia literei din cuvant in sirul de stelute
 
         Scanner sc = new Scanner(System.in);
+        Random rnd = new Random(); //genereaza doar numere
+        ArrayList<String> words = new ArrayList<>(Arrays.asList("parfume", "transport", "manager", "woman", "proportion", "prestige", "vegetable", "environment", "obligation", "exemple", "liability"));
+        int index = rnd.nextInt(words.size());
         System.out.println("Welcome to Hangman!");
 
         System.out.print("Cuvantul este ");
-        String hiddenWord = "avion";
+        String hiddenWord = words.get(index);
         char[] stars = new char[hiddenWord.length()];
 //        for (int i = 0; i <= stars.length-1 ; i++)
 //        {
@@ -43,9 +48,6 @@ public class Main {
             break;
         }
         }
-
-
-
 
     }
 }
