@@ -121,9 +121,10 @@ public class Main {
             }
             pictures.remove(0);
         }
-        if(attempts==0 || pictures.isEmpty())
+        if( pictures.isEmpty())
         {
             System.out.println("Game over! Try Again!");
+            System.out.println("The hidden word was " + hiddenWord);
             break;
         }
             System.out.println(String.valueOf(stars));
